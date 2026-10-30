@@ -132,7 +132,13 @@ CREATE DATABASE bankease;
 
 Update your MySQL username, password, and database configuration in `application.properties`.
 
-### Step 5: Run the Application
+### Step 5: Run the Application Frontend
+
+```bash
+npm run dev
+```
+
+### Step 6: Run the Application Backend
 
 ```bash
 mvn spring-boot:run
