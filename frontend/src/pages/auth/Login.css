@@ -1,0 +1,50 @@
+.login-page { min-height: 100vh; display: grid; place-items: center; padding: 32px 20px; background: radial-gradient(circle at 15% 15%, #e9f3ff 0, transparent 36%), var(--canvas); }
+.login-shell { width: min(100%, 1040px); display: grid; grid-template-columns: 1fr 430px; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-md); }
+.login-context { padding: 56px 48px; color: #fff; background: linear-gradient(145deg, var(--navy-950), var(--navy-800)); }
+.login-brand, .register-brand, .staff-brand, .customer-brand, .employee-brand, .admin-control-brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
+.brand-icon, .brand-mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--teal-600); color: #fff; font-weight: 900; }
+.login-context-copy { max-width: 430px; margin-top: 84px; }
+.login-kicker, .login-context-kicker, .login-eyebrow, .register-kicker, .staff-kicker, .customer-kicker, .employee-kicker, .control-kicker { color: #73d6d1; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.login-context h1, .login-context h2, .register-aside h1, .register-aside h2, .staff-register-aside h1, .staff-register-aside h2 { margin: 14px 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: -.04em; }
+.login-context p, .register-aside p, .staff-register-aside p { color: rgba(255,255,255,.72); line-height: 1.7; }
+.login-context ul { margin: 28px 0 0; padding: 0; list-style: none; display: grid; gap: 14px; color: rgba(255,255,255,.86); }
+.login-context li::before { content: '✓'; margin-right: 10px; color: #73d6d1; font-weight: 800; }
+.login-context-foot { margin-top: 56px; color: rgba(255,255,255,.55); font-size: 13px; }
+.login-card { padding: 48px 40px; align-self: stretch; }
+.login-heading h1, .login-heading h2, .register-heading h1, .register-heading h2, .staff-heading h1, .staff-heading h2 { margin: 0; color: var(--navy-950); font-size: 30px; letter-spacing: -.035em; }
+.login-heading p, .register-heading p, .staff-heading p { margin: 8px 0 28px; color: var(--muted); line-height: 1.6; }
+.login-role-selector { margin-bottom: 24px; }
+.login-role-selector label, .form-group label, .register-field label, .staff-form label { display: block; margin-bottom: 8px; color: var(--navy-900); font-size: 13px; font-weight: 700; }
+.login-role-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.login-role-option { padding: 10px 6px; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--muted); background: #f8fafc; cursor: pointer; font-size: 12px; font-weight: 700; }
+.login-role-option.active { border-color: var(--blue-600); color: var(--blue-600); background: #eff6ff; }
+.login-form, .register-form, .staff-form { display: grid; gap: 18px; }
+.form-group, .register-field, .staff-field { display: grid; }
+.form-group input, .register-field input, .staff-field input, .staff-field select { width: 100%; min-height: 46px; padding: 0 13px; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--ink); background: #fff; }
+.form-group input:focus, .register-field input:focus, .staff-field input:focus, .staff-field select:focus { border-color: var(--blue-600); box-shadow: 0 0 0 3px rgba(23,105,224,.1); outline: none; }
+.login-error, .register-message.error, .staff-message.error { padding: 11px 13px; border: 1px solid #fecaca; border-radius: var(--radius-sm); color: var(--danger); background: var(--danger-bg); font-size: 13px; }
+.register-message.success, .staff-message.success { padding: 11px 13px; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); color: var(--success); background: var(--success-bg); font-size: 13px; }
+.login-button, .register-submit, .staff-submit { width: 100%; min-height: 48px; border: 0; border-radius: var(--radius-sm); color: #fff; background: var(--blue-600); cursor: pointer; font-weight: 800; box-shadow: 0 8px 18px rgba(23,105,224,.2); }
+.login-button:hover, .register-submit:hover, .staff-submit:hover { background: #1259c0; }
+.login-register-link, .register-login-link, .staff-login-link { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 13px; }
+.login-register-link a, .register-login-link a, .staff-login-link a { color: var(--blue-600); font-weight: 700; }
+.login-footer { margin-top: 30px; color: var(--subtle); text-align: center; font-size: 12px; }
+@media (max-width: 760px) { .login-page { padding: 16px; } .login-shell { grid-template-columns: 1fr; } .login-context { padding: 30px 24px; } .login-context-copy { margin-top: 40px; } .login-context ul, .login-context-foot { display: none; } .login-card { padding: 30px 24px; } }
+
+/* Refinement: make authentication feel like the same product as the signed-in experience. */
+.login-page, .register-page, .staff-register-page { background: #eef3f8; }
+.login-shell, .register-panel, .staff-register-panel { border-radius: 16px; box-shadow: 0 24px 60px rgba(15,35,65,.12); }
+.login-context, .register-aside, .staff-register-aside { background: var(--navy-950); }
+.login-context { padding: 58px 52px; }
+.login-context-copy { margin-top: 96px; }
+.login-context h2, .register-aside h2, .staff-register-aside h2 { font-weight: 700; }
+.login-card, .register-form-panel, .staff-register-form-panel { padding: 52px 46px; }
+.login-heading h2, .register-heading h2, .staff-heading h2 { font-size: 32px; font-weight: 700; }
+.login-heading p, .register-heading p, .staff-heading p { font-size: 14px; }
+.login-role-options { gap: 6px; }
+.login-role-option { min-height: 42px; }
+.login-form, .register-form, .staff-form { gap: 20px; }
+.form-group input, .register-field input, .staff-field input, .staff-field select { min-height: 48px; font-size: 14px; }
+.login-button, .register-submit, .staff-submit { min-height: 50px; box-shadow: none; }
+.login-button:hover, .register-submit:hover, .staff-submit:hover { transform: translateY(-1px); }
+@media (max-width: 760px) { .login-context { padding: 30px 24px; } .login-context-copy { margin-top: 42px; } .login-card, .register-form-panel, .staff-register-form-panel { padding: 32px 24px; } }

@@ -1,0 +1,111 @@
+.customer-app, .employee-app, .admin-control-center { min-height: 100vh; background: var(--canvas); }
+.customer-topbar, .employee-topbar, .admin-control-topbar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; min-height: 72px; padding: 0 5vw; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); backdrop-filter: blur(12px); }
+.customer-brand, .employee-brand, .admin-control-brand { color: var(--navy-950); }
+.customer-user, .employee-user, .admin-control-user { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 13px; }
+.customer-user button, .employee-user button, .admin-control-user button { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 9px 13px; color: var(--navy-900); background: #fff; cursor: pointer; font-weight: 700; }
+.customer-main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 46px 0 96px; }
+.customer-greeting { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.customer-greeting h1, .employee-command h1, .control-intro h1 { margin: 8px 0; color: var(--navy-950); font-size: clamp(28px, 4vw, 42px); letter-spacing: -.045em; }
+.customer-greeting p, .employee-command p { margin: 0; color: var(--muted); }
+.customer-message, .employee-message { margin: 16px 0; padding: 12px 14px; border-radius: var(--radius-sm); font-size: 13px; }
+.customer-message.error, .employee-message.error { color: var(--danger); background: var(--danger-bg); }
+.customer-message.success, .employee-message.success { color: var(--success); background: var(--success-bg); }
+.money-overview { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 30px; border-radius: var(--radius-lg); color: #fff; background: linear-gradient(135deg, var(--navy-950), var(--navy-800)); box-shadow: var(--shadow-md); }
+.money-overview small, .money-overview span { color: rgba(255,255,255,.7); }
+.money-overview h2 { margin: 8px 0 0; font-size: clamp(34px, 6vw, 54px); letter-spacing: -.05em; }
+.balance-mark { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 14px; color: #fff; background: rgba(255,255,255,.13); font-size: 22px; }
+.quick-actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 34px; }
+.quick-actions a { padding: 15px; border: 1px solid var(--line); border-radius: var(--radius-md); color: var(--navy-900); background: var(--surface); text-decoration: none; font-size: 13px; font-weight: 800; box-shadow: var(--shadow-sm); }
+.quick-actions a:hover { border-color: #b5c8dc; transform: translateY(-1px); }
+.customer-section-title { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 14px; }
+.customer-section-title h2, .panel-heading h2 { margin: 0; color: var(--navy-950); font-size: 18px; }
+.account-scroller { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 12px; overflow-x: auto; padding-bottom: 4px; }
+.account-tile, .money-action-panel, .transfer-panel, .activity-panel, .help-panel { border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+.account-tile { min-height: 128px; padding: 18px; }
+.account-tile.active { border-color: var(--blue-600); box-shadow: 0 0 0 2px rgba(23,105,224,.12); }
+.account-tile h3 { margin: 10px 0; color: var(--navy-900); }
+.account-tile p, .customer-empty, .request-preview, .activity-item p { margin: 0; color: var(--muted); font-size: 13px; }
+.customer-workspace, .customer-lower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+.money-action-panel, .transfer-panel, .activity-panel, .help-panel { padding: 22px; }
+.money-action-panel h2, .transfer-panel h2, .activity-panel h2, .help-panel h2 { margin: 0 0 18px; color: var(--navy-950); font-size: 18px; }
+.money-form { display: grid; gap: 14px; }
+.money-form label { display: grid; gap: 7px; color: var(--navy-900); font-size: 13px; font-weight: 700; }
+.money-form input, .money-form select, .customer-search input { min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; }
+.segmented-control { display: flex; gap: 6px; margin-bottom: 14px; padding: 4px; border-radius: var(--radius-sm); background: #f1f5f9; }
+.segmented-control button { flex: 1; border: 0; border-radius: 6px; padding: 9px; color: var(--muted); background: transparent; cursor: pointer; font-weight: 700; }
+.segmented-control button.active { color: var(--navy-900); background: #fff; box-shadow: var(--shadow-sm); }
+.primary-action, .queue-primary { border: 0; border-radius: var(--radius-sm); padding: 11px 15px; color: #fff; background: var(--blue-600); cursor: pointer; font-weight: 800; }
+.primary-action:disabled, .queue-primary:disabled { cursor: not-allowed; opacity: .55; }
+.activity-list, .request-preview { display: grid; gap: 12px; }
+.activity-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.activity-item:last-child { border-bottom: 0; }
+.activity-icon, .help-icon { display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; border-radius: 10px; color: var(--blue-600); background: #eff6ff; }
+.activity-item strong { display: block; margin-bottom: 3px; color: var(--navy-900); }
+.activity-amount { margin-left: auto; font-weight: 800; }
+.request-preview { padding: 14px; border: 1px solid var(--line-soft); border-radius: var(--radius-sm); }
+.request-status, .queue-status, .rule-state { width: fit-content; padding: 5px 9px; border-radius: 99px; color: var(--warning); background: var(--warning-bg); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+.text-action { border: 0; padding: 0; color: var(--blue-600); background: transparent; cursor: pointer; font-weight: 800; }
+.support-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.support-actions .primary-action { min-height: 42px; }
+.request-status.pending { color: var(--warning); background: var(--warning-bg); }
+.request-status.in_progress { color: var(--blue-600); background: #eff6ff; }
+.request-status.resolved { color: var(--success); background: var(--success-bg); }
+.request-status.rejected { color: var(--danger); background: var(--danger-bg); }
+.service-requests-page .customer-greeting { margin-bottom: 20px; }
+.back-action { margin-bottom: 26px; border: 0; padding: 0; color: var(--muted); background: transparent; cursor: pointer; font-weight: 700; }
+.service-request-layout { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(340px, 1.15fr); gap: 24px; }
+.service-request-form-panel, .service-request-list-panel { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.service-request-form-panel { border-top: 3px solid var(--blue-600); }
+.service-request-form-panel h2 { margin: 8px 0; color: var(--navy-950); font-size: 21px; }
+.service-request-form-panel > p { margin: 0 0 22px; color: var(--muted); }
+.money-form textarea { padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); resize: vertical; font: inherit; }
+.field-hint { color: var(--muted); font-size: 12px; font-weight: 400; }
+.service-request-list { display: grid; gap: 12px; }
+.service-request-item { padding: 16px; border: 1px solid var(--line-soft); border-radius: var(--radius-sm); background: #fbfdff; }
+.service-request-item-heading { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.service-request-item-heading strong { color: var(--navy-900); }
+.service-request-item p { margin: 12px 0 8px; color: var(--muted); line-height: 1.5; white-space: pre-wrap; }
+.service-request-item small { color: var(--muted); font-size: 12px; }
+@media (max-width: 760px) { .service-request-layout { grid-template-columns: 1fr; } .service-request-form-panel, .service-request-list-panel { padding: 22px; } }
+.customer-bottom-nav, .employee-nav, .admin-control-nav { display: flex; gap: 8px; justify-content: center; padding: 18px 20px; border-top: 1px solid var(--line); background: #fff; }
+.customer-bottom-nav a, .employee-nav a, .admin-control-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 700; }
+@media (max-width: 760px) { .customer-topbar, .employee-topbar, .admin-control-topbar { padding: 0 18px; } .customer-user span, .employee-user span, .admin-control-user span { display: none; } .customer-main { width: min(100% - 28px, 620px); padding-top: 28px; } .customer-greeting { display: block; } .money-overview { padding: 22px; } .quick-actions { grid-template-columns: repeat(2, 1fr); } .customer-workspace, .customer-lower-grid { grid-template-columns: 1fr; } .customer-bottom-nav { position: fixed; inset: auto 0 0; z-index: 6; justify-content: space-around; } }
+
+/* Refinement: create a calmer reading order with one dominant financial summary and quieter secondary sections. */
+.customer-topbar, .employee-topbar, .admin-control-topbar { min-height: 76px; }
+.customer-main { padding-top: 52px; }
+.customer-greeting { margin-bottom: 30px; }
+.customer-greeting h1, .employee-command h1, .control-intro h1 { font-weight: 750; }
+.customer-date { color: var(--muted); font-size: 14px; font-weight: 600; }
+.money-overview { min-height: 190px; padding: 34px 38px; background: var(--navy-950); box-shadow: 0 18px 42px rgba(7,26,52,.16); }
+.money-overview span { display: block; font-size: 13px; font-weight: 700; letter-spacing: .01em; }
+.money-overview strong { display: block; margin: 10px 0 12px; font-size: clamp(38px, 6vw, 58px); line-height: 1; font-weight: 700; letter-spacing: -.055em; }
+.money-overview small { font-size: 13px; }
+.quick-actions { grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 14px 0 42px; }
+.quick-actions a { display: flex; align-items: center; gap: 11px; min-height: 58px; padding: 14px 16px; border-radius: var(--radius-sm); box-shadow: none; }
+.quick-actions a span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 8px; color: var(--blue-600); background: #eff6ff; font-size: 16px; }
+.quick-actions a:hover { border-color: var(--blue-600); background: #fbfdff; transform: none; }
+.customer-section-title { margin-bottom: 16px; }
+.customer-section-title h2 { margin-top: 3px; font-size: 20px; letter-spacing: -.02em; }
+.account-tile { min-height: 148px; padding: 20px; border-radius: var(--radius-sm); box-shadow: none; text-align: left; }
+.account-tile strong { display: block; margin: 12px 0 8px; color: var(--navy-950); font-size: 23px; letter-spacing: -.03em; }
+.account-tile small { color: var(--muted); font-size: 12px; }
+.customer-workspace, .customer-lower-grid { gap: 24px; margin-top: 24px; }
+.money-action-panel, .transfer-panel, .activity-panel, .help-panel { padding: 28px; border-radius: var(--radius-sm); box-shadow: none; }
+.money-action-panel { border-top: 3px solid var(--blue-600); }
+.transfer-panel { border-top: 3px solid var(--teal-600); }
+.money-action-panel h2, .transfer-panel h2, .activity-panel h2, .help-panel h2 { font-size: 20px; letter-spacing: -.02em; }
+.money-form { gap: 16px; }
+.money-form label { font-size: 14px; }
+.money-form input, .money-form select { min-height: 48px; }
+.primary-action { min-height: 46px; padding-inline: 18px; }
+.activity-panel, .help-panel { border-top: 1px solid var(--line); }
+.activity-item { min-height: 64px; padding: 14px 0; }
+.activity-item > div:nth-child(2) { min-width: 0; flex: 1; }
+.activity-item small { color: var(--muted); font-size: 12px; }
+.activity-amount { text-align: right; }
+.help-panel > p { max-width: 34ch; color: var(--muted); }
+.request-preview { margin: 18px 0; background: #f8fafc; }
+.customer-bottom-nav { display: none; }
+@media (max-width: 900px) { .quick-actions { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .customer-main { padding-top: 30px; } .money-overview { min-height: 160px; padding: 26px 24px; } .money-overview strong { font-size: 42px; } .quick-actions { margin-bottom: 32px; } .customer-bottom-nav { display: flex; } }

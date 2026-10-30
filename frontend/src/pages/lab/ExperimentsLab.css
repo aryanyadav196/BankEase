@@ -1,0 +1,51 @@
+.lab-app { min-height: 100vh; background: var(--canvas); }
+.lab-topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px max(24px, calc((100% - 1180px) / 2)); border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .94); }
+.lab-brand { display: inline-flex; align-items: center; gap: 11px; color: var(--navy-950); text-decoration: none; }
+.lab-brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 11px; color: #fff; background: var(--blue-600); font-weight: 900; }
+.lab-brand strong, .lab-brand small { display: block; }
+.lab-brand strong { font-size: 17px; letter-spacing: -.02em; }
+.lab-brand small { margin-top: 1px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.lab-topnav { display: flex; align-items: center; gap: 22px; }
+.lab-topnav a { color: var(--muted); font-size: 13px; font-weight: 800; text-decoration: none; }
+.lab-topnav a:hover { color: var(--blue-600); }
+.lab-main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 56px 0 72px; }
+.lab-hero { display: grid; grid-template-columns: minmax(0, 1fr) 220px; align-items: end; gap: 34px; padding-bottom: 38px; }
+.lab-kicker { color: var(--blue-600); font-size: 11px; font-weight: 900; letter-spacing: .14em; }
+.lab-hero h1 { max-width: 700px; margin: 10px 0 12px; color: var(--navy-950); font-size: clamp(34px, 5vw, 58px); letter-spacing: -.055em; line-height: 1.02; }
+.lab-hero p, .lab-section-heading p, .lab-next p { max-width: 690px; margin: 0; color: var(--muted); font-size: 16px; }
+.lab-hero-card { padding: 22px; border-radius: var(--radius-lg); color: #fff; background: var(--navy-950); box-shadow: var(--shadow-md); }
+.lab-hero-card span, .lab-hero-card small { display: block; color: #a9bdd8; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.lab-hero-card strong { display: block; margin: 8px 0 3px; font-size: 58px; line-height: 1; }
+.lab-hero-card small { letter-spacing: 0; text-transform: none; }
+.lab-summary { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 58px; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-sm); }
+.lab-summary div { display: flex; align-items: baseline; gap: 11px; padding: 18px 20px; border-right: 1px solid var(--line-soft); }
+.lab-summary div:last-child { border-right: 0; }
+.lab-summary strong { color: var(--navy-950); font-size: 27px; }
+.lab-summary span { color: var(--muted); font-size: 12px; font-weight: 800; }
+.lab-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+.lab-section-heading h2, .lab-next h2 { margin: 7px 0 0; color: var(--navy-950); font-size: 28px; letter-spacing: -.035em; }
+.lab-section-heading p { max-width: 310px; font-size: 12px; text-align: right; }
+.experiment-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.experiment-card { display: flex; min-height: 258px; flex-direction: column; padding: 21px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); box-shadow: var(--shadow-sm); }
+.experiment-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.experiment-number { color: var(--subtle); font-size: 14px; font-weight: 900; letter-spacing: .08em; }
+.experiment-status { padding: 5px 8px; border-radius: 99px; font-size: 10px; font-weight: 900; text-align: right; }
+.experiment-status.ready { color: var(--success); background: var(--success-bg); }
+.experiment-status.partial { color: var(--warning); background: var(--warning-bg); }
+.experiment-status.planned { color: var(--muted); background: #eef2f6; }
+.experiment-card h3 { margin: 20px 0 8px; color: var(--navy-950); font-size: 17px; line-height: 1.25; }
+.experiment-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.experiment-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; padding-top: 18px; }
+.experiment-links a { color: var(--blue-600); font-size: 12px; font-weight: 900; text-decoration: none; }
+.experiment-links a:hover { text-decoration: underline; }
+.lab-next { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 58px; padding: 27px 30px; border-radius: var(--radius-lg); background: #eaf2ff; }
+.lab-next p { max-width: 730px; margin-top: 10px; font-size: 13px; }
+.lab-primary-action { flex: 0 0 auto; padding: 12px 16px; border-radius: var(--radius-sm); color: #fff; background: var(--blue-600); font-size: 13px; font-weight: 900; text-decoration: none; }
+.lab-primary-action:hover { background: var(--navy-800); }
+.kotlin-instructions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .65fr); gap: 20px 32px; align-items: center; margin-top: 18px; padding: 25px 30px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow-sm); }
+.kotlin-instructions h2 { margin: 7px 0 8px; color: var(--navy-950); font-size: 24px; letter-spacing: -.035em; }
+.kotlin-instructions p { max-width: 630px; margin: 0; color: var(--muted); font-size: 13px; }
+.kotlin-instructions pre { margin: 0; padding: 16px; overflow-x: auto; border-radius: var(--radius-sm); color: #dbeafe; background: var(--navy-950); font-size: 13px; line-height: 1.7; }
+.kotlin-instructions small { grid-column: 1 / -1; color: var(--subtle); font-size: 11px; }
+@media (max-width: 900px) { .experiment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px) { .lab-topbar { align-items: flex-start; flex-direction: column; padding: 16px 20px; } .lab-topnav { width: 100%; justify-content: space-between; gap: 12px; } .lab-main { width: min(100% - 28px, 560px); padding-top: 38px; } .lab-hero { grid-template-columns: 1fr; gap: 24px; } .lab-hero-card { width: 100%; } .lab-summary { grid-template-columns: 1fr; } .lab-summary div { border-right: 0; border-bottom: 1px solid var(--line-soft); } .lab-summary div:last-child { border-bottom: 0; } .lab-section-heading, .lab-next, .kotlin-instructions { align-items: flex-start; flex-direction: column; } .lab-section-heading p { text-align: left; } .experiment-grid { grid-template-columns: 1fr; } .lab-next, .kotlin-instructions { padding: 23px; } .kotlin-instructions { display: flex; } .kotlin-instructions pre { width: 100%; } .kotlin-instructions small { width: 100%; } }

@@ -1,0 +1,16 @@
+.staff-register-panel { max-width: 1040px; }
+.staff-register-aside { background: linear-gradient(145deg, #102b50, #155e75); }
+.staff-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.staff-heading, .staff-message, .staff-submit, .staff-login-link { grid-column: 1 / -1; }
+.staff-field small { margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+@media (max-width: 760px) { .staff-form { grid-template-columns: 1fr; } .staff-heading, .staff-message, .staff-submit, .staff-login-link { grid-column: auto; } }
+
+.staff-register-page { background: #eef3f8; }
+.staff-register-panel { border-radius: 16px; box-shadow: 0 24px 60px rgba(15,35,65,.12); }
+.staff-register-aside { padding: 58px 46px; background: var(--navy-950); }
+.staff-register-form-panel { padding: 52px 46px; }
+.staff-heading h2 { font-size: 32px; font-weight: 700; }
+.staff-form { gap: 20px; }
+.staff-field input, .staff-field select { min-height: 48px; font-size: 14px; }
+.staff-submit { min-height: 50px; box-shadow: none; }
+@media (max-width: 760px) { .staff-register-aside { padding: 30px 24px; } .staff-register-form-panel { padding: 32px 24px; } }
