@@ -2,6 +2,7 @@
 # Java compiled files
 *.class
 *.jar
+!.mvn/wrapper/maven-wrapper.jar
 *.war
 
 # Maven
@@ -43,3 +44,22 @@ dist/
 # Build files
 build/
 out/
+
+# Gradle generated files
+.gradle/
+**/.gradle/
+
+# Flutter generated files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# Additional local configuration
+application-local.yaml
+application-local.yml
+application-local.properties
+
+# Kotlin / Android generated files
+.kotlin/
+.cxx/
