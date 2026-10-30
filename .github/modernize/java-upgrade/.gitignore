@@ -1,0 +1,45 @@
+
+# Java compiled files
+*.class
+*.jar
+*.war
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
+
+# Temporary files
+*.tmp
+*.swp
+
+# Node modules (if frontend uses Node.js)
+node_modules/
+dist/
+
+# Build files
+build/
+out/
